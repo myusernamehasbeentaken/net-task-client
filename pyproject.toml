@@ -7,7 +7,6 @@ name = "net_task_client"
 version = "0.1.3"
 description = "A nornir net task project"
 readme = "README.md"
-repository = "https://github.com/myusernamehasbeentaken/net-task-client"
 requires-python = ">=3.9"
 authors = [
   { name="Larry Zhu", email="larry.lan.zhu@gmail.com" },
@@ -23,6 +22,9 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Operating System :: OS Independent",
 ]
+
+[project.urls]
+Repository = "https://github.com/myusernamehasbeentaken/net-task-client"
 
 [tool.setuptools.packages.find]
 where = ["src"]
