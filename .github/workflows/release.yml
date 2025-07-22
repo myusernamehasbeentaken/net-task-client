@@ -33,6 +33,6 @@ jobs:
 
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
+        # with:
           # Trusted publishing uses OIDC for authentication, so no explicit username/password is needed here
           # repository_url: https://upload.pypi.org/legacy/ #  If publishing to test.pypi.org, uncomment and set this
