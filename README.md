@@ -6,7 +6,7 @@ net_task_client is a network task client using nornair to run tasks on multiple 
 
 ```
 py -m pip install net-task-client
-Please create the following folder structure and files to run the client.
+Please create the following files to run the client.
 Example config, hosts, groups, defaults are included with the git package.
 
 ~/
@@ -18,7 +18,7 @@ Example config, hosts, groups, defaults are included with the git package.
 ```
 
 ## Usage
-Please make sure you update the inventory file hosts.yml
+Please make sure you update the inventory file hosts.yml with your settings.
 ```
 import net_task_client
 client = net_task_client.TaskHandler()

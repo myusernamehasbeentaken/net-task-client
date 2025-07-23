@@ -2,6 +2,7 @@ import os
 import logging
 
 from pathlib import Path
+from getpass import getuser, getpass
 from nornir import InitNornir
 from nornir.core.task import Task, Result
 from nornir_netmiko.tasks import netmiko_send_command
@@ -16,6 +17,10 @@ class TaskHandler:
         self.nr = InitNornir(config_file=SETTINGS_FILE,
                              dry_run=True,
                              )
+        if not self.nr.inventory.defaults.username:
+            self.nr.inventory.defaults.username = input("Username: ")
+        if not self.nr.inventory.defaults.password:
+            self.nr.inventory.defaults.password = getpass()
     
     def filter(self, site, role):
         self.nr = self.nr.filter(site=site, role=role)

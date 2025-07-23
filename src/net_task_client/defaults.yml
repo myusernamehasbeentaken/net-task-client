@@ -1,4 +1,3 @@
 ---
-data:  
-  nornir_username: admin
-  nornir_password: cisco
+username:
+password:
